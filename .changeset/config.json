@@ -1,0 +1,9 @@
+{
+  "extends": "@monorepo/changesets/.changeset/config.json",
+  "changelog": [
+    "/@monorepo/changesets/node_modules/@changesets/changelog-github",
+    {
+      "repo": "yaoxfly/common"
+    }
+  ]
+}

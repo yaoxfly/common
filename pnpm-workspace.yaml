@@ -1,0 +1,5 @@
+packages: 
+    - "projects/*"
+    - "examples/*"
+    - '!**/test/**'
+    
