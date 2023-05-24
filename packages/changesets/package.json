@@ -1,0 +1,20 @@
+{
+  "name": "@yaoxfly/changesets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./node_modules/@changesets/cli/dist/cli.cjs.js",
+  "module": "./node_modules/@changesets/cli/dist/cli.esm.js",
+  "bin": {
+    "changeset": "./node_modules/@changesets/cli/bin.js"
+  },
+  "scripts": {
+    "changeset": "changeset",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "*"
+  }
+}
