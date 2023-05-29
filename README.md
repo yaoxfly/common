@@ -25,3 +25,19 @@ pnpm add axios --filter 工程名
 pnpm add @monorepo/core   --filter  @monorepo/utils
 ```
 
+### 调试
+
+```
+npm link
+```
+
+全局删除
+
+```
+npm uninstall -g  [包名]
+```
+
+某个包删除
+```
+npm unlink [包名]
+```
