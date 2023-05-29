@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "composite": true, // 用于帮助 TypeScript 快速确定引用工程的输出文件位置
+    "allowSyntheticDefaultImports": true, // 允许通过 import x from ‘y’ 即使模块没有显式指定 default 导出
+    "removeComments": true, // 删除注释
+    "esModuleInterop": true, //允许通过es6语法引入commonjs模块
+    "resolveJsonModule": true //解析json模块--不设置某些块会引入会报错
+  }
+}
