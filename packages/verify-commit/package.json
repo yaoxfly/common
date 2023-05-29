@@ -1,0 +1,41 @@
+{
+  "name": "@yaoxfly/verify-commit",
+  "version": "1.0.1",
+  "description": "",
+  "type": "module",
+  "private": false,
+  "bin": {
+    "yx-verify-commit": "bin/src/index.js"
+  },
+  "files": [
+    "bin",
+    "sh"
+  ],
+  "keywords": [
+    "husky",
+    "lint-staged",
+    "commitlint",
+    "commitizen"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build:tsc": "tsc",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yaoxfly",
+  "license": "MIT",
+  "dependencies": {
+    "@yaoxfly/node-utils": "workspace:^",
+    "commander": "^10.0.1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "@yaoxfly/eslint-config": "workspace:^"
+  }
+}
