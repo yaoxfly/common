@@ -25,8 +25,8 @@ pnpm add axios --filter 工程名
 pnpm add @monorepo/core   --filter  @monorepo/utils
 ```
 
-### 调试
-
+### node模块调试
+用了link后可以使用命令调试
 ```
 npm link
 ```
@@ -41,3 +41,16 @@ npm uninstall -g  [包名]
 ```
 npm unlink [包名]
 ```
+
+
+### 启动
+单独启动
+
+```
+pnpm --filter [包名] dev
+```
+
+启动多个
+``
+pnpm --parallel  dev
+``
