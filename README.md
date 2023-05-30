@@ -1,56 +1,64 @@
-# common
-通用库，通用配置。
+## common
+A common library and common configuration developed based on the monorepo + pnpm architecture.
 
+## function
+- [X] @yaoxfly/eslint-config
+Custom eslint common configuration
+- [ ] @yaoxfly/verify-commit
+Integrate husky, lint-staged, commitlint, commitizen, etc., Standardized Git commit
 
-## 主仓库添加插件
+## Adding plugins to the main warehouse
 
-```
-pnpm add -Dw 插件名
-```
-
-## 给某个package单独安装指定依赖
-
-pnpm 提供了 --filter 参数，可以用来对特定的package进行某些操作。
-
-因此，如果想给 pkg1 安装一个依赖包，比如 axios，可以进行如下操作：
-
-
-```
-pnpm add axios --filter 工程名
+```js
+pnpm add -Dw [Plugin Name]
 ```
 
-### 模块之间的相互依赖
+## Specify dependencies for individual installation of a certain package
+
+pnpm provides the --filter parameter, which can be used to perform certain operations on specific packages.
+
+Therefore, if you want to install a dependency package for pkg, such as axios, you can do the following:
+
+
+```js
+pnpm add axios --filter pkg
+```
+
+### interdependencies between modules
+
+In monorepo, project A introduces project B，For example:
 
 ```
-pnpm add @monorepo/core   --filter  @monorepo/utils
+pnpm add  @yaoxfly/eslint-config  --filter  @yaoxfly/verify-commit
 ```
+### node module debugging
 
-### node模块调试
-用了link后可以使用命令调试
-```
+After using the link, you can use the command to debug
+
+```js
 npm link
 ```
 
-全局删除
+If you want to test the published package, delete the npm link package globally
 
-```
-npm uninstall -g  [包名]
-```
-
-某个包删除
-```
-npm unlink [包名]
+```js
+npm uninstall -g  [Package names]
 ```
 
+### start up
+start alone
 
-### 启动
-单独启动
-
+```js
+pnpm --filter [Package names] dev
 ```
-pnpm --filter [包名] dev
-```
 
-启动多个
-``
+start multiple
+
+```js
+pnpm --parallel  [scripts command]
+
+//For example:
 pnpm --parallel  dev
-``
+```
+
+
