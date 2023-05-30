@@ -1,7 +1,7 @@
 {
   "name": "@yaoxfly/changesets",
   "version": "1.0.0",
-  "description": "",
+  "description": "changesets",
   "main": "./node_modules/@changesets/cli/dist/cli.cjs.js",
   "module": "./node_modules/@changesets/cli/dist/cli.esm.js",
   "bin": {
@@ -11,9 +11,22 @@
     "changeset": "changeset",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "yaoxfly",
   "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaoxfly/common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yaoxfly/common/issues"
+  },
   "devDependencies": {
     "@changesets/cli": "*"
   }

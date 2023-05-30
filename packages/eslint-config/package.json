@@ -1,14 +1,27 @@
 {
   "name": "@yaoxfly/eslint-config",
   "version": "1.0.0",
-  "description": "",
+  "description": "eslint config",
   "main": ".eslintrc.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "yaoxfly",
   "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaoxfly/common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yaoxfly/common/issues"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "eslint": "^8.0.1",

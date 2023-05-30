@@ -1,9 +1,13 @@
 {
   "name": "@yaoxfly/verify-commit",
   "version": "1.0.1",
-  "description": "",
-  "type": "module",
-  "private": false,
+  "description": "verify commit",
+  "scripts": {
+    "dev": "tsc -w",
+    "build:tsc": "tsc",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "bin": {
     "yx-verify-commit": "bin/src/index.js"
   },
@@ -17,23 +21,26 @@
     "commitlint",
     "commitizen"
   ],
+  "type": "module",
+  "private": false,
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "dev": "tsc -w",
-    "build:tsc": "tsc",
-    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "yaoxfly",
   "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaoxfly/common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yaoxfly/common/issues"
+  },
   "dependencies": {
     "@yaoxfly/node-utils": "workspace:^",
     "commander": "^10.0.1"
-  },
-  "engines": {
-    "node": ">=16"
   },
   "devDependencies": {
     "@yaoxfly/eslint-config": "workspace:^"
