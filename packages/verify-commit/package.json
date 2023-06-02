@@ -1,7 +1,7 @@
 {
   "name": "@yaoxfly/verify-commit",
   "version": "1.0.1",
-  "description": "verify commit",
+  "description": "Say goodbye to cumbersome configurations, an npx command automatically downloads husky, lint-staged, commitlint, commitizen, cz-customizable, etc., and completes the relevant configurations.",
   "scripts": {
     "dev": "tsc -w",
     "build:tsc": "tsc",
@@ -13,13 +13,17 @@
   },
   "files": [
     "bin",
-    "sh"
+    "husky",
+    "commitlint"
   ],
   "keywords": [
     "husky",
     "lint-staged",
     "commitlint",
-    "commitizen"
+    "commitizen",
+    "cz-customizable",
+    "commitlint-config-cz",
+    "git hooks"
   ],
   "type": "module",
   "private": false,
@@ -27,13 +31,15 @@
     "access": "public"
   },
   "author": "yaoxfly",
+  "homepage": "https://github.com/yaoxfly/common/blob/main/packages/verify-commit/README.md##Type",
   "license": "MIT",
   "engines": {
     "node": ">=16"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yaoxfly/common.git"
+    "url": "https://github.com/yaoxfly/common.git",
+    "directory": "packages/verify-commit"
   },
   "bugs": {
     "url": "https://github.com/yaoxfly/common/issues"
