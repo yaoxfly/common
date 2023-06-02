@@ -53,7 +53,7 @@ const lintStaged = async (): Promise<void> => {
     const packageJsonData = readFile('package.json')
     Object.assign(packageJsonData, {
       'lint-staged': {
-        '*.{vue,js,ts,jsx,tsx}': [
+        '*.{js,ts,jsx,tsx,vue}': [
           hasWorkspace().value ? 'pnpm --parallel lint' : `${get()} run lint`
         ]
       },

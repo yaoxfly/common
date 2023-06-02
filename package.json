@@ -38,7 +38,7 @@
     "typescript": "^5.0.4"
   },
   "lint-staged": {
-    "*.{vue,js,ts,jsx,tsx}": [
+    "*.{js,ts,jsx,tsx,vue}": [
       "pnpm --parallel lint"
     ]
   },
