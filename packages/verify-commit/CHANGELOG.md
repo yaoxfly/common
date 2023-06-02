@@ -4,4 +4,4 @@
 
 ### Patch Changes
 
-- 集成 husky
+- Integrate husky
