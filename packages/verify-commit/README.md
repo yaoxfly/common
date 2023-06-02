@@ -29,14 +29,14 @@ Common types are (based on Angular specification extensions)
 
 You can customize the type and modify it in the `.cz.config.json` file
 
-## CHANGELOG
-[CHANGELOG.md](https://github.com/yaoxfly/common/blob/main/packages/verify-commit/CHANGELOG.md)
+## Changelog
+update log [CHANGELOG](https://github.com/yaoxfly/common/blob/main/packages/verify-commit/CHANGELOG.md)
 
-## 参考
-[Husky](https://typicode.github.io/husky/)    
-[lint-staged](https://github.com/okonet/lint-staged)
-[commitlint](https://github.com/conventional-changelog/commitlint)
-[commitizen](https://github.com/commitizen-tools/commitizen)
-[cz-customizable](https://github.com/leoforfree/cz-customizable)
+## References
++ [Husky](https://typicode.github.io/husky/)    
++ [lint-staged](https://github.com/okonet/lint-staged)
++ [commitlint](https://github.com/conventional-changelog/commitlint)
++ [commitizen](https://github.com/commitizen-tools/commitizen)
++ [cz-customizable](https://github.com/leoforfree/cz-customizable)
 
 

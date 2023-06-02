@@ -1,10 +1,10 @@
 ## common
 A common library and common configuration developed based on the monorepo + pnpm architecture.
 
-## function
-- [X] @yaoxfly/eslint-config
+## Function
+###  @yaoxfly/eslint-config
 Custom eslint common configuration
-- [X] @yaoxfly/verify-commit
+###  [@yaoxfly/verify-commit](https://github.com/yaoxfly/common/blob/main/packages/verify-commit/README.md)
 Say goodbye to cumbersome configurations, an npx command automatically downloads husky, lint-staged, commitlint, commitizen, cz-customizable, etc., and completes the relevant configurations.
 
 ## Adding plugins to the main warehouse
@@ -24,14 +24,14 @@ Therefore, if you want to install a dependency package for pkg, such as axios, y
 pnpm add axios --filter pkg
 ```
 
-### interdependencies between modules
+### Interdependencies between modules
 
 In monorepo, project A introduces project B，For example:
 
 ```
 pnpm add  @yaoxfly/eslint-config  --filter  @yaoxfly/verify-commit
 ```
-### node module debugging
+### Node module debugging
 
 After using the link, you can use the command to debug
 
@@ -45,7 +45,7 @@ If you want to test the published package, delete the npm link package globally
 npm uninstall -g  [Package names]
 ```
 
-### start up
+### Start up
 start alone
 
 ```js
