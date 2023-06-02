@@ -9,7 +9,12 @@ import { fileURLToPath } from 'url'
  * @author yx
  * @param  {String}  filePath 文件路径
  */
-export const readFile = (filePath: PathOrFileDescriptor): string => {
+
+interface ReadFile {
+  scripts: string
+}
+
+export const readFile = (filePath: PathOrFileDescriptor): JSON & ReadFile => {
   const file = readFileSync(filePath)
   return JSON.parse(file.toString())
 }
