@@ -31,7 +31,7 @@
     "access": "public"
   },
   "author": "yaoxfly",
-  "homepage": "https://github.com/yaoxfly/common/blob/main/packages/verify-commit/README.md##Type",
+  "homepage": "https://github.com/yaoxfly/common/blob/main/packages/verify-commit/README.md",
   "license": "MIT",
   "engines": {
     "node": ">=16"
