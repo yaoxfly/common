@@ -4,8 +4,8 @@ A common library and common configuration developed based on the monorepo + pnpm
 ## function
 - [X] @yaoxfly/eslint-config
 Custom eslint common configuration
-- [ ] @yaoxfly/verify-commit
-Integrate husky, lint-staged, commitlint, commitizen,cz-customizable, etc., Standardized Git commit。
+- [X] @yaoxfly/verify-commit
+Say goodbye to cumbersome configurations, an npx command automatically downloads husky, lint-staged, commitlint, commitizen, cz-customizable, etc., and completes the relevant configurations.
 
 ## Adding plugins to the main warehouse
 
