@@ -1,6 +1,6 @@
 {
   "name": "@yaoxfly/node-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "node utils",
   "main": "lib/src/index.js",
   "types": "lib/src/index.d.ts",
