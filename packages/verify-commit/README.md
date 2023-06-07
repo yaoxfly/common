@@ -5,6 +5,10 @@ Say goodbye to cumbersome configurations, an npx command automatically downloads
 ```
 npx  @yaoxfly/verify-commit d
 ```
+Quick language selection
+```
+npx  @yaoxfly/verify-commit d -l zh-hans  // Simplified Chinese
+```
 
 ## Type
 Common types are (based on Angular specification extensions)
