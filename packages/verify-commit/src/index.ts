@@ -11,9 +11,10 @@ program
 
 program
   .command('download').alias('d')
+  .option('-l --lang <language-name>', 'Please enter an language')
   .description('download verify commit')
-  .action(() => {
-    void downLoad()
+  .action((option) => {
+    void downLoad(option)
   })
 
 program.parse(process.argv)

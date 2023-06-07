@@ -1,11 +1,54 @@
 import { shellExec, readFile } from '@yaoxfly/node-utils'
 import { existsSync, writeFile, readFileSync, writeFileSync } from 'fs'
 import { resolve, packageManager } from './utils.js'
-export const downLoad = async (): Promise<void> => {
-  await husky()
-  await lintStaged()
-  await commitlint()
-  await commitizen()
+import inquirer from 'inquirer'
+export const downLoad = async (option): Promise<void> => {
+  const param = [
+    {
+      type: 'checkbox',
+      message: 'Please select below the language you wish to the config with',
+      name: 'select',
+      default: ['husky', 'lintStaged', 'commitlint', 'commitizen'],
+      choices: [
+        { name:' husky', value:'husky' },
+        { name:' lint-staged', value:'lintStaged' },
+        { name:' @commitlint/cli @commitlint/config-conventional ', value:'commitlint' },
+        { name:' commitizen cz-customizable commitlint-config-cz ', value:'commitizen' }
+      ]
+    }
+  ]
+  const answers = await inquirer.prompt(param)
+  const { select } = answers || {}
+  const keyMap = {
+    husky,
+    lintStaged,
+    commitlint,
+    commitizen
+  }
+
+  const language = await getLanguage(option)
+  for (const element of select) {
+    await keyMap[element](language)
+  }
+}
+
+const getLanguage = async (option): Promise<string> => {
+  const { lang } = option || {}
+  if (lang) {
+    return lang
+  }
+  const param = [
+    {
+      type: 'list',
+      message: 'Please select below the language you wish to the config with',
+      name: 'language',
+      default: 'English',
+      choices: [{ name:'English', value:'English' }, { name:'中文(简体)', value:'zh-hans' }]
+    }
+  ]
+  const answers = await inquirer.prompt(param)
+  const { language } = answers || {}
+  return language
 }
 
 /** @description  Git hooks
@@ -103,7 +146,7 @@ const commitlint = async (): Promise<void> => {
 /** @description  commit content verification
  * @author yx
  */
-const commitizen = async (): Promise<void> => {
+const commitizen = async (language): Promise<void> => {
   const { directive } = packageManager()
   // @commitlint/cz-commitlint
   await shellExec({
@@ -129,7 +172,7 @@ const commitizen = async (): Promise<void> => {
       }
     })
     writeFileSync('package.json', JSON.stringify(packageJsonData, null, 2))
-    const content = readFileSync(resolve(`../../commitlint/${file}`))
+    const content = readFileSync(resolve(`../../commitlint/${language === 'zh-hans' ? '.cz.config-zh-hans.json' : file}`))
     writeFile(file, content, 'utf8', (err) => {
       if (err) {
         console.log(err)

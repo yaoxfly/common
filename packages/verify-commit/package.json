@@ -46,7 +46,8 @@
   },
   "dependencies": {
     "@yaoxfly/node-utils": "workspace:^",
-    "commander": "^10.0.1"
+    "commander": "^10.0.1",
+    "inquirer": "^9.2.7"
   },
   "devDependencies": {
     "@yaoxfly/eslint-config": "workspace:^"

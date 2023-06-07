@@ -1,56 +1,59 @@
 {
   "types": [
-    { "value": "feat", "name": "feat：新增功能、页面" },
-    { "value": "fix", "name": "fix：修复某个bug" },
-    { "value": "patch", "name": "patch：打个重要补丁" },
-    { "value": "docs", "name": "docs：修改增加文档、注释" },
-    { "value": "config", "name": "config：修改配置文件" },
+    { "value": "feat", "name": "feat: A new feature" },
+    { "value": "fix", "name": "fix: A bug fix" },
+    { "value": "patch", "name": "patch: Make an important patch" },
+    { "value": "docs", "name": "docs: Documentation only changes" },
+    { "value": "config", "name": "config: Modify the configuration fil" },
     {
       "value": "chore",
-      "name": "chore：不修改 src 或测试文件的其他更改"
+      "name": "chore: Changes to the build process or auxiliary tools and libraries such as documentation generation"
     },
     {
       "value": "ci",
-      "name": "ci：更改CI配置文件和脚本（示例范围：Husky、Eslint、commitizen）"
+      "name": "ci: Change CI configuration files and scripts  (example range: Husky, Eslint, commitizen)"
     },
     {
       "value": "style",
-      "name": "style：不影响代码运行的变动、空格、格式、缺少分号等"
+      "name": "style: Changes that do not affect the meaning of the code  (white-space, formatting, missing semi-colons, etc)"
     },
-    { "value": "perf", "name": "perf：提升性能、用户体验等" },
+    {
+      "value": "perf",
+      "name": "perf: A code change that improves performance"
+    },
     {
       "value": "refactor",
-      "name": "refactor：代码重构，未新增任何功能和修复任何bug"
+      "name": "refactor: A code change that neither fixes a bug nor adds a feature"
     },
     {
       "value": "build",
-      "name": "build：编译打包相关修改，例如发布版本、对项目构建或外部依赖的改动（例如修改vite、webpack等配置）"
+      "name": "build: Compilation and packaging related modifications, such as release version, changes to project construction or external dependencies (such as modifying vite, webpack, etc. configuration)"
     },
     {
       "value": "tag",
-      "name": "tag：打个标签"
+      "name": "tag: Make a tag"
     },
     {
       "value": "delete",
-      "name": "delete：删除无用的文件夹或文件"
+      "name": "delete: Delete unnecessary folders or files"
     },
-    { "value": "init", "name": "init:初始化代码" },
-    { "value": "test", "name": "test：包括单元测试、集成测试" },
-    { "value": "revert", "name": "revert：代码回退到某个版本节点" }
+    { "value": "init", "name": "init: initialization code" },
+    { "value": "test", "name": "test: Adding missing tests" },
+    { "value": "revert", "name": "revert: Revert to a commit" }
   ],
 
   "messages": {
-    "type": "请选择提交类型(必填):",
-    "scope": "请选择一个scope (可选):",
-    "customScope": "请输入文件修改范围(可选):",
-    "subject": "请简要描述提交(必填):",
-    "body": "请输入详细描述，使用\"|\"换行(可选):\n",
-    "breaking": "列出任务非兼容性说明 (可选):\n",
-    "footer": "请输入要关闭的issue，例如：#12, #34(可选):\n",
-    "confirmCommit": "确定提交此说明吗？"
+    "type": "Select the type of change that you're committing:",
+    "scope": "\nDenote the SCOPE of this change (optional):",
+    "customScope": "Denote the SCOPE of this change:",
+    "subject": "Write a SHORT, IMPERATIVE tense description of the change:\n",
+    "body": "Provide a LONGER description of the change (optional). Use \"|\" to break new line:\n",
+    "breaking": "List any BREAKING CHANGES (optional):\n",
+    "footer": "List any ISSUES CLOSED by this change (optional). E.g.: #31, #34:\n",
+    "confirmCommit": "Are you sure you want to proceed with the commit above?"
   },
   "allowCustomScopes": true,
-  "skipQuestions": ["scope", "customScope", "body", "breaking"],
+  "skipQuestions": ["scope", "customScope", "body", "breaking", "footer"],
   "allowBreakingChanges": ["feat", "fix"],
   "subjectLimit": 100
 }
