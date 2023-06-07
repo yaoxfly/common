@@ -1,12 +1,13 @@
 {
   "name": "@yaoxfly/verify-commit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Say goodbye to cumbersome configurations, an npx command automatically downloads husky, lint-staged, commitlint, commitizen, cz-customizable, etc., and completes the relevant configurations.",
   "scripts": {
     "dev": "tsc -w",
     "build:tsc": "tsc",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build:tsc"
   },
   "bin": {
     "yx-verify-commit": "bin/src/index.js"
