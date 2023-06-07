@@ -39,7 +39,7 @@ interface Config {
           succeed:'succeed'
    })
  */
-export const shellExec = async (config: Config): Promise<any> => {
+export const shellExec = async (config: Config): Promise<void> => {
   const { directive, cwd, loading, log, succeed } = config || {}
   await new Promise((resolve, reject) => {
     log && console.log(`\n ${log}`)
