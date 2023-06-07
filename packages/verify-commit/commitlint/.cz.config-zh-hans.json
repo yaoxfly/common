@@ -27,10 +27,6 @@
       "name": "build：编译打包相关修改，例如发布版本、对项目构建或外部依赖的改动（例如修改vite、webpack等配置）"
     },
     {
-      "value": "tag",
-      "name": "tag：打标签"
-    },
-    {
       "value": "delete",
       "name": "delete：删除无用的文件夹或文件"
     },

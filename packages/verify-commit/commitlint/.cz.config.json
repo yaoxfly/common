@@ -30,10 +30,6 @@
       "name": "build: Compilation and packaging related modifications, such as release version, changes to project construction or external dependencies (such as modifying vite, webpack, etc. configuration)"
     },
     {
-      "value": "tag",
-      "name": "tag: Make a tag"
-    },
-    {
       "value": "delete",
       "name": "delete: Delete unnecessary folders or files"
     },

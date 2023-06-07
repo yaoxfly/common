@@ -27,7 +27,6 @@
         "perf",
         "refactor",
         "build",
-        "tag",
         "delete",
         "init",
         "test",
