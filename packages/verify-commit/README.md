@@ -1,6 +1,8 @@
 ## @yaoxfly/verify-commit
 Say goodbye to cumbersome configurations, an npx command automatically downloads husky, lint-staged, commitlint, commitizen, cz-customizable, etc., and completes the relevant configurations.
 
+![](./images//ezgif.com-gif-maker.gif)
+
 ## Use
 ```
 npx  @yaoxfly/verify-commit d
