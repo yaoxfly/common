@@ -1,6 +1,6 @@
 {
   "name": "@yaoxfly/verify-commit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Say goodbye to cumbersome configurations, an npx command automatically downloads husky, lint-staged, commitlint, commitizen, cz-customizable, etc., and completes the relevant configurations.",
   "scripts": {
     "dev": "tsc -w",
