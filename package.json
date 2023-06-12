@@ -25,10 +25,10 @@
   "license": "MIT",
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "*",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@types/node": "^20.2.3",
-    "@yaoxfly/changesets": "workspace:^",
     "commitizen": "^4.3.0",
     "commitlint-config-cz": "^0.13.3",
     "cz-customizable": "^7.0.0",
